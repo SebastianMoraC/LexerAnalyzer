@@ -11,7 +11,6 @@ tokens = (
     'DIVIDE',
     'PAREN',
     'ENDPAREN',
-    'ID',
     'EXP',
     'JUMP',
     'NUM'
@@ -25,9 +24,7 @@ t_PAREN = r'\('
 t_ENDPAREN  = r'\)'
 t_EXP = r'\^'
 
-def t_ID(t):
-    r'\w+(_\d\w)*'
-    return t
+
 def t_NUM(t):
     r'\d+(\.\d+)?(\^\d+)?'
     t.value = float(t.value)
